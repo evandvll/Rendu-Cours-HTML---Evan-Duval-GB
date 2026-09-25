@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Noir légèrement gris */
+    background-color: #0b0b0b;
+    color: #e8e8e8;
+}
+
+
+header {
+    background-color: #111111;
+    border-bottom: 3px solid #8b0000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 8%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 35px;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #f2f2f2;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d35400;
+}
+
+
+.hero {
+    background-color: #050505;
+    color: white;
+    text-align: center;
+
+    padding: 50px 20px;
+
+    border-bottom: 1px solid #292929;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin: 0;
+
+    color: #d35400;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #aaaaaa;
+}
+
+
+.personnages {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+
+    padding: 40px 20px;
+
+    background-color: #111111;
+}
+
+.personnage {
+    text-align: center;
+}
+
+.personnage img {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 3px solid #8b0000;
+
+    transition: 0.3s;
+}
+
+
+/* Petit effet quand on passe sur une image */
+
+.personnage img:hover {
+    transform: scale(1.08);
+    border-color: #d35400;
+}
+
+.personnage h3 {
+    margin-top: 10px;
+    color: #dddddd;
+}
+
+
+/* =========================
+   HISTOIRES
+========================= */
+
+#histoires {
+    padding: 50px 10%;
+
+    background-color: #0b0b0b;
+}
+
+.titre-section {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+
+    color: #d35400;
+}
+
+.histoires {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.carte {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+    color: #eeeeee;
+
+    border: 1px solid #333333;
+
+    box-shadow: 0 5px 15px #000000;
+}
+
+.carte img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+    border: 2px solid #444444;
+}
+
+.carte h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+
+.freddy {
+    background-color: #25100c;
+    border-left: 6px solid #a93226;
+}
+
+.freddy h2 {
+    color: #d35400;
+}
+
+.myers {
+    background-color: #15101c;
+    border-left: 6px solid #54276f;
+}
+
+.myers h2 {
+    color: #9b59b6;
+}
+
+.ghostface {
+    background-color: #151515;
+    border-left: 6px solid #777777;
+}
+
+.ghostface h2 {
+    color: #eeeeee;
+}
+
+.funfacts {
+    background-color: #050505;
+    color: white;
+
+    padding: 50px 10%;
+
+    border-top: 1px solid #292929;
+}
+
+.funfacts h2 {
+    text-align: center;
+    font-size: 35px;
+
+    color: #d35400;
+}
+
+.facts-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.fact {
+    background-color: #161616;
+
+    width: 30%;
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid #4a1717;
+
+    transition: 0.3s;
+}
+
+.fact:hover {
+    transform: translateY(-5px);
+
+    border-color: #8b0000;
+}
+
+.fact h3 {
+    color: #c0392b;
+}
+
+.fact p {
+    color: #bbbbbb;
+    line-height: 1.5;
+}
+
+
+footer {
+    text-align: center;
+
+    background-color: #080808;
+    color: #888888;
+
+    padding: 20px;
+
+    border-top: 3px solid #8b0000;
+
+    font-weight: bold;
+}
+
+
+/*VERSION TELEPHONE*/
+
+
+@media screen and (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    .personnages {
+        gap: 20px;
+    }
+
+    .personnage img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .personnage h3 {
+        font-size: 13px;
+    }
+
+    .carte {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .facts-container {
+        flex-direction: column;
+    }
+
+    .fact {
+        width: 100%;
+    }
+}
